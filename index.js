@@ -41,7 +41,7 @@ function play() {
 random = Math.floor(Math.random() * 20 + 1);
 
 
-//
+//main game = each player has to guess the numoer which will be  between 1 and 20
 do{
   guessPlayer1 = prompt( player1 + ' please enter your guess (between 1 - 20:');
 
@@ -50,6 +50,7 @@ do{
 		} else if (guessPlayer1 < random) {
 			console.log('Your guess is too low');
 		} else {
+      // if they get is correct then a point is added
 			console.log('You got it correct');
     pointPlayer1++
 		console.log('You have ' + pointPlayer1 + 'points');
@@ -70,12 +71,12 @@ if (guessPlayer2 > random){
     break;
     }
     round++
-
+// each player gets 3 chances to guess the correct number
 } while (round <= 6){
 
 }
 
-
+// after the 3 chances, the user is asked if they want to play again or not.
 let again = prompt ('Do you want to play again?');
 
 if (again =='yes') {
